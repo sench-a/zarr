@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './src/pages/**/*.{ts,tsx}',
-    './src/components/**/*.{ts,tsx}',
-    './src/app/**/*.{ts,tsx}',
-	],
+    "./src/pages/**/*.{ts,tsx}",
+    "./src/components/**/*.{ts,tsx}",
+    "./src/app/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -15,6 +15,18 @@ module.exports = {
       },
     },
     extend: {
+      fontSize: {
+        xxs: "10px",
+        xs: "12px",
+        sm: "13px",
+        base: "15px",
+        lg: "17px",
+        xl: "19px",
+        "2xl": "23px",
+        "3xl": "29px",
+        "4xl": "35px",
+        "5xl": "47px",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -56,7 +68,6 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-       
         "accordion-down": {
           from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -66,64 +77,64 @@ module.exports = {
           to: { height: 0 },
         },
         "fade-in": {
-					"0%": {
-						opacity: "0%",
-					},
-					"75%": {
-						opacity: "0%",
-					},
-					"100%": {
-						opacity: "100%",
-					},
-				},
-				"fade-left": {
-					"0%": {
-						transform: "translateX(100%)",
-						opacity: "0%",
-					},
+          "0%": {
+            opacity: "0%",
+          },
+          "75%": {
+            opacity: "0%",
+          },
+          "100%": {
+            opacity: "100%",
+          },
+        },
+        "fade-left": {
+          "0%": {
+            transform: "translateX(100%)",
+            opacity: "0%",
+          },
 
-					"30%": {
-						transform: "translateX(0%)",
-						opacity: "100%",
-					},
-					"100%": {
-						opacity: "0%",
-					},
-				},
-				"fade-right": {
-					"0%": {
-						transform: "translateX(-100%)",
-						opacity: "0%",
-					},
+          "30%": {
+            transform: "translateX(0%)",
+            opacity: "100%",
+          },
+          "100%": {
+            opacity: "0%",
+          },
+        },
+        "fade-right": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: "0%",
+          },
 
-					"30%": {
-						transform: "translateX(0%)",
-						opacity: "100%",
-					},
-					"100%": {
-						opacity: "0%",
-					},
-				},
-        "title": {
-					"0%": {
-						"line-height": "0%",
-						"letter-spacing": "0.25em",
-						opacity: "0",
-					},
-					"25%": {
-						"line-height": "0%",
-						opacity: "0%",
-					},
-					"80%": {
-						opacity: "100%",
-					},
+          "30%": {
+            transform: "translateX(0%)",
+            opacity: "100%",
+          },
+          "100%": {
+            opacity: "0%",
+          },
+        },
+        title: {
+          "0%": {
+            "line-height": "0%",
+            "letter-spacing": "0.25em",
+            opacity: "0",
+          },
+          "25%": {
+            "line-height": "0%",
+            opacity: "0%",
+          },
+          "80%": {
+            opacity: "100%",
+          },
 
-					"100%": {
-						"line-height": "100%",
-						opacity: "100%",
-					},
-				},
-        "shimmer": {
+          "100%": {
+            "line-height": "100%",
+            opacity: "100%",
+          },
+        },
+        shimmer: {
           "0%": {
             backgroundPosition: "0 0",
           },
@@ -136,12 +147,12 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 2.15s ease-in-out forwards",
-				"title": "title 1.75s ease-out forwards",
-        "shimmer": "shimmer 2s linear infinite",
-				"fade-left": "fade-left 1.75s ease-in-out forwards",
-				"fade-right": "fade-right 1.75s ease-in-out forwards",
+        title: "title 1.75s ease-out forwards",
+        shimmer: "shimmer 2s linear infinite",
+        "fade-left": "fade-left 1.75s ease-in-out forwards",
+        "fade-right": "fade-right 1.75s ease-in-out forwards",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

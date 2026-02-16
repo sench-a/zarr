@@ -3,63 +3,107 @@
 @tailwind utilities;
 
 @layer base {
-	:root {
-		--background: 0 0% 3.9%;
-		--foreground: 0 0% 98%;
+  :root {
+    --background: 216 70% 1.5%;
+    --foreground: 0 0% 98%;
 
-		--card: 0 0% 3.9%;
-		--card-foreground: 0 0% 98%;
+    --card: 216 70% 2%;
+    --card-foreground: 0 0% 98%;
 
-		--popover: 0 0% 3.9%;
-		--popover-foreground: 0 0% 98%;
+    --popover: 216 70% 2%;
+    --popover-foreground: 0 0% 98%;
 
-		--primary: 0 0% 98%;
-		--primary-foreground: 0 0% 9%;
+    --primary: 216 10% 96%;
+    --primary-foreground: 0 0% 9%;
 
-		--secondary: 0 0% 14.9%;
-		--secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
 
-		--muted: 0 0% 14.9%;
-		--muted-foreground: 0 0% 63.9%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 216 10% 60%;
 
-		--accent: 0 0% 14.9%;
-		--accent-foreground: 0 0% 98%;
+    --accent: 40 85% 58%;
+    --accent-foreground: 0 0% 98%;
 
-		--success: 142 80% 42%;
+    --success: 142 80% 42%;
 
-		--destructive: 0 70% 45%;
-		--destructive-foreground: 0 0% 98%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
 
-		--border: 0 0% 14.9%;
-		--input: 0 0% 14.9%;
-		--ring: 0 0% 83.1%;
+    --border: 216 15% 15%;
+    --input: 216 15% 15%;
+    --ring: 0 0% 83.1%;
 
-		--radius: 0.5rem;
-	}
+    --radius: 0.5rem;
+
+    --layout-width: 1024px;
+
+    --header-height: 72px;
+    --header-z-index: 100;
+
+    --form-gap: 40px;
+    --form-headline-gap: 12px;
+    --form-padding: 24px;
+
+    --padding-x: 24px;
+
+    --section-gap: 120px;
+    --section-padding-y: 120px;
+  }
 }
 
 @layer base {
-	* {
-		@apply border-border;
-	}
-	body {
-		@apply bg-background text-foreground;
-		font-feature-settings: 'rlig' 1, 'calt' 1;
-	}
+  * {
+    @apply border-border;
+  }
 
-	.text-edge-outline {
-		-webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
-	}
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
 
-	.animate-fade {
-		@apply animate-in fade-in-0 duration-300;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 300;
+    color: var(--primary);
+    line-height: 1.15; /* the baseline is 1.5 */
+  }
 
-	.max-width-screen {
-		@apply px-4 max-w-screen-xl mx-auto;
-	}
+  p {
+    color: hsl(var(--muted-foreground));
+    font-size: clamp(12px, 5vw, 14px);
+    font-weight: 400;
+    max-width: 32rem /* 512px */;
+    text-wrap: pretty;
+    letter-spacing: 0.05em; /* the baseline is 0 */
+    line-height: 1.75; /* the baseline is 1.5 */
+  }
 
-	.card {
-		@apply bg-card/90 relative animate-fade border rounded-sm duration-300;
-	}
+  section {
+    @apply relative;
+  }
+
+  .form-headline {
+    @apply text-xl leading-none;
+  }
+
+  .form-description {
+    @apply text-sm text-muted-foreground tracking-wider;
+  }
+
+  .card-wrapper {
+    @apply relative p-[1px] rounded-sm overflow-hidden;
+    background-image: linear-gradient(
+      45deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--border)) 15%,
+      hsl(var(--border)) 85%,
+      hsl(var(--primary)) 100%
+    );
+  }
 }
