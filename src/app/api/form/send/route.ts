@@ -16,7 +16,7 @@ export async function POST(request: Request): Promise<Response> {
 
   try {
     await resend.emails.send({
-      from: "Reservations <zarr@amberlens.design>",
+      from: "Reservations <contact@zarr.design>",
       to: WEBSITE_CONFIG.email,
       subject: "New reservation",
       react: NotificationEmail({ form: data }),

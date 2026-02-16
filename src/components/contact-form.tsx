@@ -57,8 +57,7 @@ export const ContactForm = () => {
     });
 
     if (response.ok) {
-      toast.success("Request successfully sent", {
-        description: "We will reply within 48 hours.",
+      toast.success("Request successfully sent!", {
         position: "top-center",
       });
 
@@ -295,7 +294,7 @@ export const ContactForm = () => {
                   onClick={form.handleSubmit(onSubmit)}
                 >
                   {isSubmitting ? (
-                    <Icons.spinner className="animate-spin" />
+                    <Icons.spinner className="animate-spin" size={20} />
                   ) : (
                     <p className="text-sm text-primary-foreground">Submit</p>
                   )}

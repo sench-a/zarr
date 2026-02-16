@@ -19,7 +19,7 @@ export const WEBSITE_CONFIG = {
   description:
     "Crafting websites with elegant UI, evocative copywriting, reliable engineering, and advanced tooling.",
   siteName: "zarr | web engineer",
-  email: "info@amberlens.design",
+  email: "poulpawker@gmail.com",
   url: env.NEXT_PUBLIC_URL,
   routes: {
     ...FRONTEND_ROUTES,
