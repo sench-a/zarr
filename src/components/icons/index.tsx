@@ -14,11 +14,14 @@ import {
   ChevronLeft,
   SmartphoneNfc,
 } from "lucide-react";
+import { LinkIcon } from "./link";
+import { TypeScriptIcon } from "./typescript";
 
 export const Icons = {
-  link: Link,
+  link: LinkIcon,
   plus: Plus,
   config: Cog,
+  typescript: TypeScriptIcon,
   email: Mail,
   project: Code,
   telegram: Send,

@@ -82,7 +82,7 @@ export const ContactForm = () => {
             <div className="space-y-[--form-headline-gap]">
               <h3 className="form-headline">Introduce your brand</h3>
               <p className="form-description">
-                Let&apos;s create something extraordinary
+                Let&apos;s create something extraordinary.
               </p>
             </div>
 
@@ -120,6 +120,9 @@ export const ContactForm = () => {
                       <SelectTrigger
                         id="country"
                         aria-invalid={fieldState.invalid}
+                        className={cn({
+                          "text-muted-foreground": !field.value,
+                        })}
                       >
                         <SelectValue placeholder="Select" />
                       </SelectTrigger>
@@ -147,7 +150,7 @@ export const ContactForm = () => {
             <div className="space-y-[--form-headline-gap]">
               <h3 className="form-headline">How can I reach you?</h3>
               <p className="form-description">
-                Please provide your contact information
+                Please provide your contact information.
               </p>
             </div>
 
@@ -277,13 +280,16 @@ export const ContactForm = () => {
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="text-sm p-0"
+                  className="text-sm p-0 text-muted-foreground"
                   onClick={() => {
                     setDirection(-1);
                     setCurrentStep((prev) => prev - 1);
                   }}
                 >
-                  Back
+                  <div className="inline-flex items-center gap-[4px]">
+                    <Icons.back size={16} />
+                    <p>Back</p>
+                  </div>
                 </Button>
               ) : null}
 
@@ -296,7 +302,9 @@ export const ContactForm = () => {
                   {isSubmitting ? (
                     <Icons.spinner className="animate-spin" size={20} />
                   ) : (
-                    <p className="text-sm text-primary-foreground">Submit</p>
+                    <p className="text-sm font-normal text-primary-foreground">
+                      Submit
+                    </p>
                   )}
                 </Button>
               ) : (
@@ -316,8 +324,9 @@ export const ContactForm = () => {
       </MotionConfig>
 
       <div className="flex flex-col gap-[8px] px-[--padding-x] py-[16px] border-t *:text-[10px] *:text-muted-foreground *:tracking-wider">
-        <p className="text-xxs">
-          Your data will be handled pursuant to zarr&apos;s Privacy Policy.
+        <p className="text-xxs tracking-wider">
+          Your data will be handled pursuant to zarr.design&apos;s Privacy
+          Policy.
         </p>
       </div>
     </div>

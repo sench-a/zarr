@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { motion } from "motion/react";
 
@@ -15,9 +16,9 @@ type SpotlightProps = {
 };
 
 export const Spotlight = ({
-  gradientFirst = "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(216, 70%, 90%, .08) 0, hsla(221, 81%, 55%, .02) 50%, hsla(216, 70%, 45%, 0) 80%)",
-  gradientSecond = "radial-gradient(50% 50% at 50% 50%, hsla(216, 70%, 90%, .06) 0, hsla(221, 81%, 55%, .02) 80%, transparent 100%)",
-  gradientThird = "radial-gradient(50% 50% at 50% 50%, hsla(216, 70%, 90%, .04) 0, hsla(221, 81%, 45%, .02) 80%, transparent 100%)",
+  gradientFirst = "radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(45, 70%, 90%, .08) 0, hsla(45, 81%, 55%, .02) 50%, hsla(45, 70%, 45%, 0) 80%)",
+  gradientSecond = "radial-gradient(50% 50% at 50% 50%, hsla(45, 70%, 90%, .06) 0, hsla(45, 81%, 55%, .02) 80%, transparent 100%)",
+  gradientThird = "radial-gradient(50% 50% at 50% 50%, hsla(45, 70%, 90%, .04) 0, hsla(45, 81%, 45%, .02) 80%, transparent 100%)",
   translateY = -350,
   width = 560,
   height = 1380,
@@ -35,8 +36,9 @@ export const Spotlight = ({
       }}
       transition={{
         duration: 1.5,
+        delay: 3.9,
       }}
-      className="pointer-events-none absolute z-[50] inset-0 h-full w-full"
+      className="pointer-events-none fixed z-[150] inset-0 h-full w-full"
     >
       <motion.div
         animate={{
@@ -48,7 +50,7 @@ export const Spotlight = ({
           repeatType: "reverse",
           ease: "easeInOut",
         }}
-        className="absolute top-0 left-0 w-screen h-screen z-40 pointer-events-none"
+        className="hidden md:block absolute top-0 left-0 w-screen h-screen z-40 pointer-events-none"
       >
         <div
           style={{

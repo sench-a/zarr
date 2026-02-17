@@ -1,5 +1,4 @@
 import { soehne } from "@/styles/fonts";
-import { Particles } from "@/components/particles";
 import { Header } from "@/components/layout/header";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";

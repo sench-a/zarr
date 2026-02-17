@@ -34,9 +34,18 @@
     --input: 216 15% 15%;
     --ring: 0 0% 83.1%;
 
+    --code-blue: 210 100% 66%;
+    --code-amber: 36 55% 53%;
+    --code-yellow: 42 70% 60%;
+    --code-red: 355 50% 57%;
+    --code-violet: 286 56% 63%;
+    --code-green: 131 43% 50%;
+    --code-gray: 0 0% 64%;
+    --code-comment: 0 0% 45%;
+
     --radius: 0.5rem;
 
-    --layout-width: 1024px;
+    --layout-width: 1152px;
 
     --header-height: 72px;
     --header-z-index: 100;
@@ -47,7 +56,7 @@
 
     --padding-x: 24px;
 
-    --section-gap: 120px;
+    --section-gap: 96px;
     --section-padding-y: 120px;
   }
 }
@@ -71,21 +80,28 @@
   h5 {
     font-weight: 300;
     color: var(--primary);
-    line-height: 1.15; /* the baseline is 1.5 */
+    line-height: 1.25; /* the baseline is 1.5 */
   }
 
-  p {
+  h2 {
+    font-size: clamp(36px, 5vw, 40px);
+    text-align: center;
+    max-width: 30rem;
+  }
+
+  p,
+  figcaption {
     color: hsl(var(--muted-foreground));
-    font-size: clamp(12px, 5vw, 14px);
+    font-size: clamp(13px, 5vw, 14px);
     font-weight: 400;
     max-width: 32rem /* 512px */;
     text-wrap: pretty;
-    letter-spacing: 0.05em; /* the baseline is 0 */
-    line-height: 1.75; /* the baseline is 1.5 */
+    letter-spacing: 0.045em; /* the baseline is 0 */
+    line-height: 1.85; /* the baseline is 1.5 */
   }
 
   section {
-    @apply relative;
+    @apply relative overflow-hidden h-full w-full;
   }
 
   .form-headline {
@@ -97,12 +113,12 @@
   }
 
   .card-wrapper {
-    @apply relative p-[1px] rounded-sm overflow-hidden;
+    @apply relative p-[1px] rounded-sm overflow-hidden border;
     background-image: linear-gradient(
       45deg,
-      hsl(var(--primary)) 0%,
-      hsl(var(--border)) 15%,
-      hsl(var(--border)) 85%,
+      hsl(var(--border)) 0%,
+      hsl(var(--border)) 10%,
+      hsl(var(--border)) 90%,
       hsl(var(--primary)) 100%
     );
   }

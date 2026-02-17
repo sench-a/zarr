@@ -33,11 +33,11 @@ export const Header = () => {
       className="backdrop-blur-sm border-b"
     >
       <div
-        className="flex flex-row items-center justify-between max-w-[--layout-width] px-[--padding-x] md:px-0 mx-auto w-full"
+        className="flex flex-row items-center justify-between max-w-[--layout-width] px-[--padding-x] xl:px-0 mx-auto w-full duration-300"
         style={{ height: "var(--header-height)" }}
       >
         <Link href={WEBSITE_CONFIG.routes.home}>
-          <p className="text-lg text-white tracking-normal">zarr</p>
+          <p className="text-xl text-primary tracking-normal">zarr.design</p>
           <span className="sr-only">{WEBSITE_CONFIG.title} Logo</span>
         </Link>
 

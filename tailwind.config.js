@@ -11,6 +11,7 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
+        xl: "1152px",
         "2xl": "1400px",
       },
     },
@@ -28,6 +29,15 @@ module.exports = {
         "5xl": "47px",
       },
       colors: {
+        "code-blue": "hsl(var(--code-blue))",
+        "code-yellow": "hsl(var(--code-yellow))",
+        "code-amber": "hsl(var(--code-amber))",
+        "code-red": "hsl(var(--code-red))",
+        "code-violet": "hsl(var(--code-violet))",
+        "code-green": "hsl(var(--code-green))",
+        "code-gray": "hsl(var(--code-gray))",
+        "code-comment": "hsl(var(--code-comment))",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
