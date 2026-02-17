@@ -4,7 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import { WEBSITE_CONFIG } from "@/config/site";
 import type { LayoutProps } from "@/types";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -61,6 +61,13 @@ export const metadata: Metadata = {
   generator: "Next.js",
   applicationName: WEBSITE_CONFIG.title,
   referrer: "origin-when-cross-origin",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({ children }: LayoutProps) {

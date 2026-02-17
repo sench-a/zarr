@@ -60,7 +60,7 @@ const PROJECTS = [
     link: "https://www.ligneroset.ee",
     title: "Ligne Roset",
     description:
-      "Premium e-commerce experience designed and engineered end-to-end for Ligne Roset – the French luxury house, est. 1860.",
+      "E-commerce webapp designed and engineered end-to-end for Ligne Roset – French luxury house, est. 1860.",
   },
   {
     icon: "/projects/amberlens.svg",
@@ -129,7 +129,7 @@ export default function Home() {
                     <Card
                       index={i}
                       card={tool}
-                      className="aspect-[4/3] md:aspect-[4/3] lg:aspect-[16/9]"
+                      className="aspect-[1] md:aspect-[4/3] lg:aspect-[16/9]"
                     />
                   </li>
                 );
@@ -139,8 +139,9 @@ export default function Home() {
         </section>
 
         <section id="contact">
-          <Container>
-            <h2>Get in touch</h2>
+          <Container className="px-0 lg:px-[--padding-x]">
+            <h2 className="px-[--padding-x]">Get in touch</h2>
+
             <ContactForm />
           </Container>
         </section>
