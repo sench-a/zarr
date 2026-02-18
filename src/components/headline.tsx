@@ -8,12 +8,13 @@ import { WEBSITE_CONFIG } from "@/config/site";
 
 export const Headline = () => {
   return (
-    <div className="relative flex flex-col justify-center gap-[40px] w-full">
-      <div className="flex flex-col gap-[24px]">
+    <div className="relative flex flex-col justify-center gap-[48px] w-full">
+      <div className="flex flex-col gap-[32px]">
         <motion.h1
           style={{
-            fontSize: "clamp(40px, 5vw, 48px)",
+            fontSize: "clamp(36px, 5vw, 48px)",
             // textAlign: "center",
+
             maxWidth: "520px",
           }}
           // className="font-medium"
@@ -40,10 +41,10 @@ export const Headline = () => {
           }}
           initial="hidden"
           animate="visible"
-          variants={BLUR_ANIMATION.wrapper}
+          variants={BLUR_ANIMATION.variants}
           transition={{
             ...BLUR_ANIMATION.transition,
-            delay: BLUR_ANIMATION.transition.duration,
+            delay: BLUR_ANIMATION.transition.duration / 2,
           }}
         >
           {WEBSITE_CONFIG.description.split(" ").map((word, index) => (
@@ -59,7 +60,7 @@ export const Headline = () => {
         </motion.p>
       </div>
 
-      <motion.div
+      {/* <motion.div
         initial="hidden"
         animate="visible"
         variants={BLUR_ANIMATION.wrapper}
@@ -69,7 +70,7 @@ export const Headline = () => {
           variants={BLUR_ANIMATION.variants}
           transition={{
             ...BLUR_ANIMATION.transition,
-            delay: BLUR_ANIMATION.transition.duration,
+            delay: 1.4,
           }}
         >
           <Button asChild>
@@ -81,14 +82,14 @@ export const Headline = () => {
           variants={BLUR_ANIMATION.variants}
           transition={{
             ...BLUR_ANIMATION.transition,
-            delay: BLUR_ANIMATION.transition.duration * 1.5,
+            delay: 1.4,
           }}
         >
           <Button variant="outline" asChild>
             <Link href={WEBSITE_CONFIG.routes.tools}>Technologies</Link>
           </Button>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

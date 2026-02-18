@@ -8,7 +8,7 @@ export const BLUR_ANIMATION = {
     },
   },
   variants: {
-    hidden: { filter: "blur(8px)", y: 15, opacity: 0 },
+    hidden: { filter: "blur(12px)", y: 15, opacity: 0 },
     visible: { filter: "none", y: 0, opacity: 1 },
   },
   transition: {

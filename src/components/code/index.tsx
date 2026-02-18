@@ -13,7 +13,7 @@ export const Code = () => {
       variants={BLUR_ANIMATION.variants}
       transition={{
         ...BLUR_ANIMATION.transition,
-        delay: BLUR_ANIMATION.transition.duration * 2,
+        delay: BLUR_ANIMATION.transition.duration * 1.35,
       }}
       className="w-full lg:max-w-xl border bg-background/60 backdrop-blur-sm rounded-sm"
     >

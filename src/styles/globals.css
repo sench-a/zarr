@@ -54,9 +54,9 @@
     --form-headline-gap: 12px;
     --form-padding: 24px;
 
-    --padding-x: 24px;
+    --padding-x: 20px;
 
-    --section-gap: 96px;
+    --section-gap: 80px;
     --section-padding-y: 120px;
   }
 }
@@ -84,20 +84,27 @@
   }
 
   h2 {
-    font-size: clamp(36px, 5vw, 40px);
+    font-size: clamp(30px, 5vw, 40px);
     text-align: center;
     max-width: 30rem;
+  }
+
+  p,
+  figcaption,
+  input,
+  select,
+  label {
+    font-weight: 300;
+    text-wrap: pretty;
+    letter-spacing: 0.05em; /* the baseline is 0 */
+    line-height: 1.8; /* the baseline is 1.5 */
   }
 
   p,
   figcaption {
     color: hsl(var(--muted-foreground));
     font-size: clamp(13px, 5vw, 14px);
-    font-weight: 400;
     max-width: 32rem /* 512px */;
-    text-wrap: pretty;
-    letter-spacing: 0.045em; /* the baseline is 0 */
-    line-height: 1.85; /* the baseline is 1.5 */
   }
 
   section {

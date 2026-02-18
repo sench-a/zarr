@@ -51,7 +51,7 @@ export const Card = ({ card, index, className }: CardProps) => {
         </div>
 
         <div className="py-[16px] px-[20px] flex flex-col justify-end items-start h-full gap-[20px]">
-          <figcaption className="text-muted-foreground sm:group-hover:text-primary duration-300">
+          <figcaption className="text-xs tracking-[0.07em] text-muted-foreground sm:group-hover:text-primary duration-300">
             {description}
           </figcaption>
         </div>

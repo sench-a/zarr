@@ -60,14 +60,14 @@ const PROJECTS = [
     link: "https://www.ligneroset.ee",
     title: "Ligne Roset",
     description:
-      "E-commerce webapp designed and engineered end-to-end for Ligne Roset – French luxury house, est. 1860.",
+      "Ligne Roset is a French luxury house established in 1860, crafting high-end designer furniture.",
   },
   {
     icon: "/projects/amberlens.svg",
     link: "https://www.amberlens.design",
     title: "Amber Lens",
     description:
-      "Head Designer at Amber Lens — a marketing agency crafting story-driven websites for restaurant brands.",
+      "Amber Lens is an agency crafting story-driven marketing websites for restaurant brands.",
   },
 ];
 
@@ -78,13 +78,13 @@ export default function Home() {
         <section>
           <Image
             src="/bg-hero.webp"
-            className="pointer-events-none absolute top-0 left-0 right-0 mx-auto hidden h-screen w-full select-none md:block opacity-80 transition-opacity duration-500"
+            className="pointer-events-none absolute top-0 left-0 right-0 mx-auto hidden h-screen w-full select-none md:block opacity-60 transition-opacity duration-500"
             alt="background"
             priority
             fill
           />
 
-          <Container className="px-0 lg:px-[--padding-x] gap-[48px] lg:flex-row items-start lg:items-center">
+          <Container className="px-0 lg:px-[--padding-x] gap-[64px] lg:flex-row items-start lg:items-center">
             <div className="px-[--padding-x] h-[50vh] lg:h-full flex flex-col items-center justify-end">
               <Headline />
             </div>
@@ -140,7 +140,13 @@ export default function Home() {
 
         <section id="contact">
           <Container className="px-0 lg:px-[--padding-x]">
-            <h2 className="px-[--padding-x]">Get in touch</h2>
+            <div className="text-center flex flex-col items-center gap-[32px]">
+              <h2 className="px-[--padding-x]">Get in touch</h2>
+              <p className="max-w-sm">
+                I am here to cater to your expectations and tailor my expertise
+                to fit your needs and requirements.
+              </p>
+            </div>
 
             <ContactForm />
           </Container>

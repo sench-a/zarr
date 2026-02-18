@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
+import { BLUR_ANIMATION } from "@/config/animation";
 
 type SpotlightProps = {
   gradientFirst?: string;
@@ -35,8 +36,8 @@ export const Spotlight = ({
         opacity: 1,
       }}
       transition={{
-        duration: 1.5,
-        delay: 3.9,
+        ...BLUR_ANIMATION.transition,
+        delay: BLUR_ANIMATION.transition.duration * 2,
       }}
       className="pointer-events-none fixed z-[150] inset-0 h-full w-full"
     >
