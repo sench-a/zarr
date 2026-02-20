@@ -9,15 +9,14 @@ import { WEBSITE_CONFIG } from "@/config/site";
 export const Headline = () => {
   return (
     <div className="relative flex flex-col justify-center gap-[48px] w-full">
-      <div className="flex flex-col gap-[32px]">
+      <div className="flex flex-col gap-[24px]">
         <motion.h1
           style={{
-            fontSize: "clamp(36px, 5vw, 48px)",
+            fontSize: "clamp(32px, 5vw, 44px)",
             // textAlign: "center",
 
             maxWidth: "520px",
           }}
-          // className="font-medium"
           initial="hidden"
           animate="visible"
           variants={BLUR_ANIMATION.wrapper}

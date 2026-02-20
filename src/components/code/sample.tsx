@@ -102,11 +102,7 @@ export const Sample = () => (
       ))}
       <span className="text-code-violet">const</span>
       <span> </span>
-      <span className="text-code-violet">{`{`}</span>
-      <span> </span>
-      <span className="text-code-red">amount</span>
-      <span> </span>
-      <span className="text-code-violet">{`}`}</span>
+      <span className="text-code-red">data</span>
       <span> </span>
       <span className="text-code-gray">=</span>
       <span> </span>

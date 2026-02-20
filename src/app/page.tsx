@@ -85,7 +85,7 @@ export default function Home() {
           />
 
           <Container className="px-0 lg:px-[--padding-x] gap-[64px] lg:flex-row items-start lg:items-center">
-            <div className="px-[--padding-x] h-[50vh] lg:h-full flex flex-col items-center justify-end">
+            <div className="px-[--padding-x] h-[40vh] lg:h-full flex flex-col items-center justify-end">
               <Headline />
             </div>
 
@@ -115,7 +115,7 @@ export default function Home() {
 
         <section id="tools" className="md:border-b">
           <Container>
-            <h2>Technologies used to outperform</h2>
+            <h2>Technologies used to scale any modern business</h2>
 
             <Grid className="grid-rows-3">
               {TOOLS.map((tool, i) => {
@@ -139,9 +139,9 @@ export default function Home() {
         </section>
 
         <section id="contact">
-          <Container className="px-0 lg:px-[--padding-x]">
-            <div className="text-center flex flex-col items-center gap-[32px]">
-              <h2 className="px-[--padding-x]">Get in touch</h2>
+          <Container className="px-0 lg:px-[--padding-x] md:flex-row">
+            <div className="px-[--padding-x] text-center flex flex-col items-center md:items-start md:text-start gap-[24px]">
+              <h2>Get in touch</h2>
               <p className="max-w-sm">
                 I am here to cater to your expectations and tailor my expertise
                 to fit your needs and requirements.

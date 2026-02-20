@@ -98,7 +98,7 @@ export const ContactForm = () => {
                       {...field}
                       id="brand-name"
                       aria-invalid={fieldState.invalid}
-                      placeholder="Amber Lens"
+                      placeholder="zarr.design"
                       autoComplete="off"
                     />
                   </Field>
@@ -204,7 +204,7 @@ export const ContactForm = () => {
                       {...field}
                       id="business-email"
                       aria-invalid={fieldState.invalid}
-                      placeholder="john@example.com"
+                      placeholder="john@smith.com"
                       autoComplete="off"
                     />
                   </Field>
@@ -280,7 +280,7 @@ export const ContactForm = () => {
                 <Button
                   size="sm"
                   variant="ghost"
-                  className="text-sm p-0 text-muted-foreground"
+                  className="group text-sm p-0 text-muted-foreground duration-0"
                   onClick={() => {
                     setDirection(-1);
                     setCurrentStep((prev) => prev - 1);
@@ -288,7 +288,7 @@ export const ContactForm = () => {
                 >
                   <div className="inline-flex items-center gap-[4px]">
                     <Icons.back size={16} />
-                    <p>Back</p>
+                    <p className="group-hover:text-primary">Back</p>
                   </div>
                 </Button>
               ) : null}
