@@ -37,7 +37,7 @@ export const Spotlight = ({
       }}
       transition={{
         ...BLUR_ANIMATION.transition,
-        delay: BLUR_ANIMATION.transition.duration * 2,
+        delay: BLUR_ANIMATION.transition.duration * 2.2,
       }}
       className="pointer-events-none fixed z-[150] inset-0 h-full w-full"
     >

@@ -1,3 +1,5 @@
+import { WEBSITE_CONFIG } from "@/config/site";
+
 export const Sample = () => (
   <code className="grid">
     <div>
@@ -165,7 +167,9 @@ export const Sample = () => (
       <span className="text-code-red">customer_email</span>
       <span className="text-code-gray">:</span>
       <span> </span>
-      <span className="text-code-green">&apos;marketing@zarr.design&apos;</span>
+      <span className="text-code-green">
+        &apos;{WEBSITE_CONFIG.email}&apos;
+      </span>
       <span className="text-code-gray">,</span>
     </div>
 

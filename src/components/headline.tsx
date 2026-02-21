@@ -13,8 +13,6 @@ export const Headline = () => {
         <motion.h1
           style={{
             fontSize: "clamp(32px, 5vw, 44px)",
-            // textAlign: "center",
-
             maxWidth: "520px",
           }}
           initial="hidden"
@@ -69,7 +67,7 @@ export const Headline = () => {
           variants={BLUR_ANIMATION.variants}
           transition={{
             ...BLUR_ANIMATION.transition,
-            delay: 1.4,
+            delay: BLUR_ANIMATION.transition.duration * 1.2,
           }}
         >
           <Button asChild>
@@ -81,7 +79,7 @@ export const Headline = () => {
           variants={BLUR_ANIMATION.variants}
           transition={{
             ...BLUR_ANIMATION.transition,
-            delay: 1.4,
+            delay: BLUR_ANIMATION.transition.duration * 1.6,
           }}
         >
           <Button variant="ghost" asChild>
