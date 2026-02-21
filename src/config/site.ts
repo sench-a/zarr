@@ -15,7 +15,7 @@ const BACKEND_ROUTES = {
 };
 
 export const WEBSITE_CONFIG = {
-  title: "Bespoke websites that keep your inbox busy",
+  title: "Bespoke websites to keep your inbox busy",
   description:
     "Seductive UI, evocative copywriting, flawless engineering – crafted in harmony to grow your revenue.",
   siteName: "zarr | web engineer",
