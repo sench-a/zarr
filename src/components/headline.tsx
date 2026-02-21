@@ -83,7 +83,7 @@ export const Headline = () => {
           }}
         >
           <Button variant="ghost" asChild>
-            <Link href={WEBSITE_CONFIG.routes.projects}>Our customers</Link>
+            <Link href={WEBSITE_CONFIG.routes.projects}>Customers</Link>
           </Button>
         </motion.div>
       </motion.div>
