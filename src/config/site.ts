@@ -15,9 +15,9 @@ const BACKEND_ROUTES = {
 };
 
 export const WEBSITE_CONFIG = {
-  title: "Bespoke websites to grow your revenue",
+  title: "Bespoke websites that keep your inbox busy",
   description:
-    "Flawless engineering, elegant UI, evocative copywriting – crafted in harmony to scale any modern business.",
+    "Seductive UI, evocative copywriting, flawless engineering – crafted in harmony to grow your revenue.",
   siteName: "zarr | web engineer",
   email: "poulpawker@gmail.com",
   url: env.NEXT_PUBLIC_URL,

@@ -41,7 +41,7 @@ export const Header = () => {
           <span className="sr-only">{WEBSITE_CONFIG.title} Logo</span>
         </Link>
 
-        <Button asChild>
+        <Button variant="outline" asChild>
           <Link href={WEBSITE_CONFIG.routes.contact}>Contact</Link>
         </Button>
       </div>

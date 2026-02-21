@@ -12,21 +12,6 @@ export const Sample = () => (
     </div>
 
     <div>
-      <span className="text-code-violet">import</span>
-      <span> </span>
-      <span className="text-code-violet">{`{`}</span>
-      <span> </span>
-      <span className="text-code-blue">NextResponse</span>
-      <span> </span>
-      <span className="text-code-violet">{`}`}</span>
-      <span> </span>
-      <span className="text-code-violet">from</span>
-      <span> </span>
-      <span className="text-code-green">&apos;next/server&apos;</span>
-      <span className="text-code-gray">;</span>
-    </div>
-
-    <div>
       <span> </span>
     </div>
 
@@ -81,7 +66,7 @@ export const Sample = () => (
       <span> </span>
       <span className="text-code-blue">POST</span>
       <span className="text-code-amber">(</span>
-      <span className="text-code-red">req</span>
+      <span className="text-code-red">request</span>
       <span className="text-code-amber">)</span>
       <span> </span>
       <span className="text-code-amber">{`{`}</span>
@@ -108,7 +93,7 @@ export const Sample = () => (
       <span> </span>
       <span className="text-code-violet">await</span>
       <span> </span>
-      <span className="text-code-red">req</span>
+      <span className="text-code-red">request</span>
       <span className="text-code-gray">.</span>
       <span className="text-code-blue">json</span>
       <span className="text-code-violet">(</span>
@@ -148,7 +133,7 @@ export const Sample = () => (
       <span className="text-code-red">amount</span>
       <span className="text-code-gray">:</span>
       <span> </span>
-      <span className="text-code-amber">10000</span>
+      <span className="text-code-amber">10,000</span>
       <span className="text-code-gray">,</span>
     </div>
 
@@ -177,21 +162,10 @@ export const Sample = () => (
       {Array.from({ length: 8 }).map((_, index) => (
         <span key={index}> </span>
       ))}
-      <span className="text-code-red">order_id</span>
-      <span className="text-code-gray">:</span>
-      <span> </span>
-      <span className="text-code-green">&apos;122&apos;</span>
-      <span className="text-code-gray">,</span>
-    </div>
-
-    <div>
-      {Array.from({ length: 8 }).map((_, index) => (
-        <span key={index}> </span>
-      ))}
       <span className="text-code-red">customer_email</span>
       <span className="text-code-gray">:</span>
       <span> </span>
-      <span className="text-code-green">&apos;zarr@zarr.design&apos;</span>
+      <span className="text-code-green">&apos;marketing@zarr.design&apos;</span>
       <span className="text-code-gray">,</span>
     </div>
 
@@ -227,25 +201,24 @@ export const Sample = () => (
       <span className="text-code-blue">json</span>
       <span className="text-code-violet">(</span>
       <span className="text-code-violet">{`{`}</span>
-    </div>
-
-    <div>
-      {Array.from({ length: 6 }).map((_, index) => (
-        <span key={index}> </span>
-      ))}
-      <span className="text-code-red">clientSecret</span>
+      <span> </span>
+      <span className="text-code-red">message</span>
       <span className="text-code-gray">:</span>
       <span> </span>
-      <span className="text-code-blue">paymentIntent</span>
-      <span className="text-code-gray">.</span>
-      <span className="text-code-red">client_secret</span>
+      <span className="text-code-green">&apos;Successful payment!&apos;</span>
       <span className="text-code-gray">,</span>
-    </div>
-
-    <div>
-      {Array.from({ length: 4 }).map((_, index) => (
-        <span key={index}> </span>
-      ))}
+      <span> </span>
+      <span className="text-code-violet">{`}`}</span>
+      <span className="text-code-violet">)</span>
+      <span className="text-code-gray">,</span>
+      <span> </span>
+      <span className="text-code-violet">{`{`}</span>
+      <span> </span>
+      <span className="text-code-red">status</span>
+      <span className="text-code-gray">:</span>
+      <span> </span>
+      <span className="text-code-amber">200</span>
+      <span> </span>
       <span className="text-code-violet">{`}`}</span>
       <span className="text-code-violet">)</span>
       <span className="text-code-gray">;</span>
@@ -260,28 +233,10 @@ export const Sample = () => (
       <span className="text-code-violet">catch</span>
       <span> </span>
       <span className="text-code-violet">(</span>
-      <span className="text-code-red">error</span>
+      <span className="text-code-red">e</span>
       <span className="text-code-violet">)</span>
       <span> </span>
       <span className="text-code-violet">{`{`}</span>
-    </div>
-
-    <div>
-      {Array.from({ length: 4 }).map((_, index) => (
-        <span key={index}> </span>
-      ))}
-      <span className="text-code-yellow">console</span>
-      <span className="text-code-gray">.</span>
-      <span className="text-code-blue">error</span>
-      <span className="text-code-violet">(</span>
-      <span className="text-code-green">
-        &apos;Error creating PaymentIntent:&apos;
-      </span>
-      <span className="text-code-gray">,</span>
-      <span> </span>
-      <span className="text-code-red">error</span>
-      <span className="text-code-violet">)</span>
-      <span className="text-code-gray">;</span>
     </div>
 
     <div>
@@ -296,12 +251,10 @@ export const Sample = () => (
       <span className="text-code-violet">(</span>
       <span className="text-code-violet">{`{`}</span>
       <span> </span>
-      <span className="text-code-red">error</span>
+      <span className="text-code-red">message</span>
       <span className="text-code-gray">:</span>
       <span> </span>
-      <span className="text-code-green">
-        &apos;Failed to create payment intent&apos;
-      </span>
+      <span className="text-code-green">&apos;Try again!&apos;</span>
       <span> </span>
       <span className="text-code-violet">{`}`}</span>
       <span className="text-code-gray">,</span>

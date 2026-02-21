@@ -8,7 +8,7 @@ import { WEBSITE_CONFIG } from "@/config/site";
 
 export const Headline = () => {
   return (
-    <div className="relative flex flex-col justify-center gap-[48px] w-full">
+    <div className="relative flex flex-col justify-center gap-[40px] w-full">
       <div className="flex flex-col gap-[24px]">
         <motion.h1
           style={{
@@ -35,7 +35,7 @@ export const Headline = () => {
 
         <motion.p
           style={{
-            maxWidth: "386px",
+            maxWidth: "420px",
             // textAlign: "center",
           }}
           initial="hidden"
@@ -59,7 +59,7 @@ export const Headline = () => {
         </motion.p>
       </div>
 
-      {/* <motion.div
+      <motion.div
         initial="hidden"
         animate="visible"
         variants={BLUR_ANIMATION.wrapper}
@@ -73,7 +73,7 @@ export const Headline = () => {
           }}
         >
           <Button asChild>
-            <Link href={WEBSITE_CONFIG.routes.projects}>Case projects</Link>
+            <Link href={WEBSITE_CONFIG.routes.contact}>Get started</Link>
           </Button>
         </motion.div>
 
@@ -84,11 +84,11 @@ export const Headline = () => {
             delay: 1.4,
           }}
         >
-          <Button variant="outline" asChild>
-            <Link href={WEBSITE_CONFIG.routes.tools}>Technologies</Link>
+          <Button variant="ghost" asChild>
+            <Link href={WEBSITE_CONFIG.routes.projects}>Our customers</Link>
           </Button>
         </motion.div>
-      </motion.div> */}
+      </motion.div>
     </div>
   );
 };

@@ -15,7 +15,7 @@ export const Code = () => {
         ...BLUR_ANIMATION.transition,
         delay: BLUR_ANIMATION.transition.duration * 1.35,
       }}
-      className="w-full lg:max-w-xl border bg-background/60 backdrop-blur-sm rounded-sm"
+      className="w-full lg:max-w-lg border bg-background/60 backdrop-blur-sm rounded-sm"
     >
       <div className="p-4 flex items-center text-muted-foreground gap-3 border-b">
         <Icons.typescript />

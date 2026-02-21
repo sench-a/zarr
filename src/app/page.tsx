@@ -84,8 +84,8 @@ export default function Home() {
             fill
           />
 
-          <Container className="px-0 lg:px-[--padding-x] gap-[64px] lg:flex-row items-start lg:items-center">
-            <div className="px-[--padding-x] h-[40vh] lg:h-full flex flex-col items-center justify-end">
+          <Container className="px-0 lg:px-[--padding-x] gap-[48px] lg:flex-row items-start lg:items-center">
+            <div className="px-[--padding-x] lg:px-0 h-[40vh] lg:h-full flex flex-col items-center justify-end">
               <Headline />
             </div>
 
@@ -115,7 +115,7 @@ export default function Home() {
 
         <section id="tools" className="md:border-b">
           <Container>
-            <h2>Technologies used to scale any modern business</h2>
+            <h2>Partnered with the best to scale your business</h2>
 
             <Grid className="grid-rows-3">
               {TOOLS.map((tool, i) => {
