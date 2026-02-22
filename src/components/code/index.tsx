@@ -15,14 +15,14 @@ export const Code = () => {
         ...BLUR_ANIMATION.transition,
         delay: BLUR_ANIMATION.transition.duration * 2.2,
       }}
-      className="w-full lg:max-w-xl border bg-background/60 backdrop-blur-sm rounded-sm"
+      className="w-full border bg-background/60 backdrop-blur-sm rounded-sm"
     >
-      <div className="p-4 flex items-center text-muted-foreground gap-3 border-b">
+      <div className="p-[24px] flex items-center text-muted-foreground gap-3 border-b">
         <Icons.typescript />
         <p className="text-xs">@/stripe/lib</p>
       </div>
 
-      <pre className="h-fit w-full p-4 text-xs md:text-sm overflow-x-scroll">
+      <pre className="p-[24px] h-fit w-full text-xs md:text-sm overflow-x-scroll">
         <Sample />
       </pre>
     </motion.div>

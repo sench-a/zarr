@@ -16,6 +16,23 @@ import {
 } from "lucide-react";
 import { LinkIcon } from "./link";
 import { TypeScriptIcon } from "./typescript";
+import {
+  X,
+  SquarePen,
+  Check,
+  ChartColumnIncreasing,
+  Globe,
+  GalleryHorizontalEnd,
+  Shield,
+  Settings2,
+  Maximize2,
+  LoaderCircle,
+  CircleAlert,
+  SearchAlert,
+  ShieldOff,
+  ShieldCheck,
+} from "lucide-react";
+import { type LucideProps } from "lucide-react";
 
 export const Icons = {
   link: LinkIcon,
@@ -33,6 +50,14 @@ export const Icons = {
   instagram: Instagram,
   chevronUp: ChevronUp,
   contact: SmartphoneNfc,
+  // Technical features
+  cms: SquarePen,
+  check: Check,
+  analytics: ChartColumnIncreasing,
+  performance: Globe,
+  responsiveness: GalleryHorizontalEnd,
+  security: Shield,
+  integrations: Settings2,
 };
 
 export type Icon = keyof typeof Icons;

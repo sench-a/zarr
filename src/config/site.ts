@@ -3,8 +3,8 @@ import { env } from "@/env";
 export const FRONTEND_ROUTES = {
   home: "/",
   contact: "/#contact",
-  projects: "/#projects",
-  tools: "/#tools",
+  customers: "/#customers",
+  partners: "/#partners",
 };
 
 const BACKEND_ROUTES = {
@@ -15,9 +15,9 @@ const BACKEND_ROUTES = {
 };
 
 export const WEBSITE_CONFIG = {
-  title: "Bespoke websites to keep your inbox busy",
+  title: "Website as trailblazing marketing system",
   description:
-    "Seductive UI, evocative copywriting, flawless engineering – crafted in harmony to grow your revenue.",
+    "Lead your target audience to your inbox with magnetic UI, passionate copywriting, and reliable engineering with eye-opening analytics.",
   siteName: "zarr | web engineer",
   email: "marketing@zarr.design",
   url: env.NEXT_PUBLIC_URL,

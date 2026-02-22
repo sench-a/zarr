@@ -37,7 +37,9 @@ export const Header = () => {
         style={{ height: "var(--header-height)" }}
       >
         <Link href={WEBSITE_CONFIG.routes.home}>
-          <p className="text-xl text-primary tracking-normal">zarr.design</p>
+          <p className="text-xl text-primary font-normal tracking-normal">
+            zarr.design
+          </p>
           <span className="sr-only">{WEBSITE_CONFIG.title} Logo</span>
         </Link>
 

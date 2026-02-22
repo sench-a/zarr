@@ -1,7 +1,7 @@
 import { WEBSITE_CONFIG } from "@/config/site";
 
 export const Sample = () => (
-  <code className="grid">
+  <code className="space-y-[4px]">
     <div>
       <span className="text-code-violet">import</span>
       <span> </span>
@@ -36,20 +36,12 @@ export const Sample = () => (
       <span className="text-code-amber">,</span>
       <span> </span>
       <span className="text-code-violet">{`{`}</span>
-    </div>
-
-    <div>
-      {Array.from({ length: 2 }).map((_, index) => (
-        <span key={index}> </span>
-      ))}
+      <span> </span>
       <span className="text-code-red">apiVersion</span>
       <span className="text-code-gray">:</span>
       <span> </span>
       <span className="text-code-green">&apos;2026-01-28&apos;</span>
-      <span className="text-code-gray">,</span>
-    </div>
-
-    <div>
+      <span> </span>
       <span className="text-code-violet">{`}`}</span>
       <span className="text-code-amber">)</span>
       <span className="text-code-gray">;</span>
@@ -181,7 +173,7 @@ export const Sample = () => (
       <span className="text-code-red">message</span>
       <span className="text-code-gray">:</span>
       <span> </span>
-      <span className="text-code-green">&apos;Successful payment!&apos;</span>
+      <span className="text-code-green">&apos;Success!&apos;</span>
       <span> </span>
       <span className="text-code-violet">{`}`}</span>
       <span className="text-code-violet">)</span>
