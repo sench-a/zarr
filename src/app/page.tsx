@@ -186,7 +186,7 @@ export default function Home() {
           <Container className="gap-[80px]">
             <div className="flex flex-col gap-[20px]">
               {/* <label className="label text-accent">Features</label> */}
-              <h2>Take your brand further, faster</h2>
+              <h2>Push your brand further and faster with ...</h2>
             </div>
 
             <Grid>
@@ -251,7 +251,7 @@ export default function Home() {
           <Container>
             <div className="flex flex-col gap-[20px]">
               {/* <label className="label text-accent">Features</label> */}
-              <h2>Partnered with the best to turn your chaos into flow</h2>
+              <h2>Partnered with the best to turn chaos into flow</h2>
             </div>
 
             <Grid className="grid-rows-3">

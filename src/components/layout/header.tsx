@@ -30,7 +30,7 @@ export const Header = () => {
         transitionDuration: "500ms",
         transitionTimingFunction: "ease-out",
       }}
-      className="backdrop-blur-sm border-b"
+      className="backdrop-blur-sm border-y"
     >
       <div
         className="flex flex-row items-center justify-between max-w-[--layout-width] px-[--padding-x] xl:px-0 mx-auto w-full duration-300"
