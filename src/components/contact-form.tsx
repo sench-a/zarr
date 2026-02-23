@@ -59,6 +59,7 @@ export const ContactForm = () => {
     if (response.ok) {
       toast.success("Request successfully sent!", {
         position: "top-center",
+        description: "Expect a response under 24 hours.",
       });
 
       form.reset();
@@ -288,7 +289,7 @@ export const ContactForm = () => {
                 >
                   <div className="inline-flex items-center gap-[4px]">
                     <Icons.back size={16} />
-                    <p className="group-hover:text-primary">Back</p>
+                    <p className="group-hover:text-primary text-sm">Back</p>
                   </div>
                 </Button>
               ) : null}
@@ -300,7 +301,11 @@ export const ContactForm = () => {
                   onClick={form.handleSubmit(onSubmit)}
                 >
                   {isSubmitting ? (
-                    <Icons.spinner className="animate-spin" size={20} />
+                    <Icons.spinner
+                      className="animate-spin"
+                      size={16}
+                      strokeWidth={1.5}
+                    />
                   ) : (
                     <p className="text-sm font-normal text-primary-foreground">
                       Submit

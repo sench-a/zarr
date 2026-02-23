@@ -1,9 +1,9 @@
 import Image from "next/image";
+import { Headline } from "@/app/headline";
 import { Code } from "@/components/code";
 import { Card } from "@/components/card";
 import { Grid } from "@/components/grid";
 import { Icons } from "@/components/icons";
-import { Headline } from "@/components/headline";
 import { Container } from "@/components/container";
 import { ContactForm } from "@/components/contact-form";
 import { Spotlight } from "@/components/ui/spotlight-new";
@@ -23,8 +23,7 @@ const TOOLS = [
   {
     icon: "/icons/posthog.svg",
     title: "PostHog",
-    description:
-      "PostHog is an analytics platform for tracking events, funnels, and user behavior.",
+    description: "PostHog is an analytics platform for tracking user behavior.",
     link: "https://posthog.com/",
   },
   {
@@ -198,9 +197,9 @@ export default function Home() {
                     key={feature.id}
                     className="group card-wrapper left-gradient"
                   >
-                    <div className="p-[24px] xl:p-[32px] relative h-full w-full bg-background/90 sm:group-hover:bg-background rounded-sm duration-300">
+                    <div className="p-[24px] relative h-full w-full bg-background/90 sm:group-hover:bg-background rounded-sm duration-300">
                       <div className="flex flex-col gap-[32px]">
-                        <div className="flex flex-col gap-[16px]">
+                        <div className="flex flex-row items-center gap-[16px]">
                           <Icon
                             size={16}
                             strokeWidth={1.5}
@@ -209,7 +208,7 @@ export default function Home() {
 
                           <h3
                             style={{
-                              fontSize: "clamp(20px, 5vw, 24px)",
+                              fontSize: "clamp(20px, 5vw, 20px)",
                               // fontWeight: 400,
                             }}
                           >
@@ -219,12 +218,12 @@ export default function Home() {
                           {/* <p className="text-sm">{feature.description}</p> */}
                         </div>
 
-                        <ul className="flex flex-col gap-[12px]">
+                        <ul className="pl-[2px] flex flex-col gap-[12px]">
                           {feature.ROI.map((item) => {
                             return (
                               <div
                                 key={item}
-                                className="inline-flex items-center gap-[12px]"
+                                className="inline-flex items-center gap-[18px]"
                               >
                                 <Icons.check
                                   size={12}
@@ -251,7 +250,7 @@ export default function Home() {
           <Container>
             <div className="flex flex-col gap-[20px]">
               {/* <label className="label text-accent">Features</label> */}
-              <h2>Partnered with the best to turn chaos into flow</h2>
+              <h2>Partnered with the best to elevate your marketing</h2>
             </div>
 
             <Grid className="grid-rows-3">
@@ -275,13 +274,19 @@ export default function Home() {
           </Container>
         </section>
 
-        <section id={FRONTEND_ROUTES.contact.replace("/#", "")}>
-          <Container className="sm:border-none px-0 lg:px-[--padding-x] md:flex-row items-center">
-            <div className="px-[--padding-x] text-center flex flex-col items-center md:items-start md:text-start gap-[24px]">
+        <section
+          id={FRONTEND_ROUTES.contact.replace("/#", "")}
+          className="px-0"
+        >
+          <Container className="sm:border-none md:flex-row items-start md:items-center justify-between">
+            <div className="px-[--padding-x] md:px-0 flex flex-col gap-[24px]">
               <h2>Get in touch</h2>
               <p className="max-w-sm">
                 I am here to cater to your expectations and tailor my expertise
                 to fit your needs and requirements.
+                <br />
+                <br />
+                Expect a response under 24 hours.
               </p>
             </div>
 

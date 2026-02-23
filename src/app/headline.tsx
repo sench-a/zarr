@@ -10,15 +10,6 @@ export const Headline = () => {
   return (
     <div className="relative flex flex-col justify-center gap-[40px] w-full">
       <div className="flex flex-col gap-[24px]">
-        <motion.small
-          className="label"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.3, ease: "easeOut" }}
-        >
-          Get a bespoke
-        </motion.small>
-
         <motion.h1
           className="max-w-lg md:max-w-xl lg:max-w-2xl"
           initial="hidden"

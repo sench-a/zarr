@@ -15,9 +15,9 @@ const BACKEND_ROUTES = {
 };
 
 export const WEBSITE_CONFIG = {
-  title: "Website as trailblazing marketing system",
+  title: "Get a marketing website to launch your product",
   description:
-    "Lead your target audience to your inbox with magnetic UI, passionate copywriting, and reliable engineering with eye-opening analytics.",
+    "Pave the way for customers to order your product with brand-centric design and copywriting, delivered on fast, reliable engineering.",
   siteName: "zarr | web engineer",
   email: "marketing@zarr.design",
   url: env.NEXT_PUBLIC_URL,
