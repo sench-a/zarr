@@ -199,23 +199,9 @@ export default function Home() {
                   >
                     <div className="p-[24px] relative h-full w-full bg-background/90 sm:group-hover:bg-background rounded-sm duration-300">
                       <div className="flex flex-col gap-[32px]">
-                        <div className="flex flex-row items-center gap-[16px]">
-                          <Icon
-                            size={16}
-                            strokeWidth={1.5}
-                            // className="text-accent"
-                          />
-
-                          <h3
-                            style={{
-                              fontSize: "clamp(20px, 5vw, 20px)",
-                              // fontWeight: 400,
-                            }}
-                          >
-                            {feature.headline}
-                          </h3>
-
-                          {/* <p className="text-sm">{feature.description}</p> */}
+                        <div className="flex flex-col gap-[16px]">
+                          <Icon size={16} strokeWidth={1.5} />
+                          <h3 className="text-2xl">{feature.headline}</h3>
                         </div>
 
                         <ul className="pl-[2px] flex flex-col gap-[12px]">
