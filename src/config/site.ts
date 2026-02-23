@@ -15,10 +15,10 @@ const BACKEND_ROUTES = {
 };
 
 export const WEBSITE_CONFIG = {
-  title: "Get a marketing website to launch your product",
+  siteName: "zarr.design",
+  title: "Get a bespoke website to launch your product",
   description:
-    "Pave the way for customers to order your product with brand-centric design and copywriting, delivered on fast, reliable engineering.",
-  siteName: "zarr | web engineer",
+    "Pave the way for customers to order your product with brand-centric design, delivered on fast, reliable engineering.",
   email: "marketing@zarr.design",
   url: env.NEXT_PUBLIC_URL,
   routes: {
