@@ -54,9 +54,8 @@ export const Customers = () => {
   return (
     <motion.div
       className="h-[--marquee-height]"
-      initial="hidden"
-      animate="visible"
-      variants={BLUR_ANIMATION.variants}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 100 }}
       transition={{
         ...BLUR_ANIMATION.transition,
         delay: BLUR_ANIMATION.transition.duration * 2,
