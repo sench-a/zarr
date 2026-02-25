@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { useWindowWidth } from "@/hooks/use-window-width";
+import { motion } from "framer-motion";
+import { BLUR_ANIMATION } from "@/config/animation";
 
 const CUSTOMERS = [
   {
@@ -50,8 +52,17 @@ export const Customers = () => {
   );
 
   return (
-    <div className="h-[--marquee-height]">
+    <motion.div
+      className="h-[--marquee-height]"
+      initial="hidden"
+      animate="visible"
+      variants={BLUR_ANIMATION.variants}
+      transition={{
+        ...BLUR_ANIMATION.transition,
+        delay: BLUR_ANIMATION.transition.duration * 2,
+      }}
+    >
       {isMobile ? <Marquee>{content}</Marquee> : content}
-    </div>
+    </motion.div>
   );
 };

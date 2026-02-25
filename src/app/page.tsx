@@ -132,7 +132,7 @@ export default function Home() {
           />
 
           <Container className="gap-[80px] sm:border-none">
-            <div className="relative px-[--padding-x] xl:px-0 h-[60vh] flex flex-col items-center justify-end duration-300">
+            <div className="relative px-[--padding-x] xl:px-0 h-[55vh] flex flex-col items-center justify-end duration-300">
               <Headline />
             </div>
 
