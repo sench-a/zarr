@@ -9,6 +9,7 @@ import { ContactForm } from "@/components/contact-form";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { FRONTEND_ROUTES } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { Customers } from "./customers";
 
 const TOOLS = [
   {
@@ -53,23 +54,6 @@ const TOOLS = [
     description:
       "Vercel is an AI cloud platform for global hosting and fast website delivery.",
     link: "https://vercel.com/home",
-  },
-];
-
-const PROJECTS = [
-  {
-    icon: "/projects/ligneroset.svg",
-    link: "https://www.ligneroset.ee",
-    title: "Ligne Roset",
-    description:
-      "Ligne Roset is a French luxury house established in 1860, crafting high-end designer furniture.",
-  },
-  {
-    icon: "/projects/amberlens.svg",
-    link: "https://www.amberlens.design",
-    title: "Amber Lens",
-    description:
-      "Amber Lens is an agency crafting story-driven marketing websites for restaurant brands.",
   },
 ];
 
@@ -141,43 +125,20 @@ export default function Home() {
         <section id="hero" className="px-0">
           <Image
             src="/bg-hero.webp"
-            className="absolute top-0 left-0 right-0 -scale-y-100 opacity-50 transition-opacity duration-500 pointer-events-none mx-auto w-full select-none"
+            className="absolute top-0 left-0 right-0 -scale-y-[1.15] opacity-50 transition-opacity duration-500 pointer-events-none mx-auto w-full select-none"
             alt="background"
             priority
             fill
           />
-          <Container className="gap-[64px] sm:border-none">
+
+          <Container className="gap-[80px] sm:border-none">
             <div className="relative px-[--padding-x] xl:px-0 h-[60vh] flex flex-col items-center justify-end duration-300">
               <Headline />
             </div>
 
+            <Customers />
+
             <Code />
-          </Container>
-        </section>
-
-        <section
-          id={FRONTEND_ROUTES.customers.replace("/#", "")}
-          className="border-t"
-        >
-          <Container>
-            <div className="flex flex-col gap-[20px]">
-              {/* <label className="label text-accent">Features</label> */}
-              <h2>Trusted by visionaries</h2>
-            </div>
-
-            <Grid>
-              {PROJECTS.map((project, i) => {
-                return (
-                  <li key={project.title} className="group card-wrapper">
-                    <Card
-                      index={i}
-                      card={project}
-                      className="aspect-[1] sm:aspect-[4/3]"
-                    />
-                  </li>
-                );
-              })}
-            </Grid>
           </Container>
         </section>
 
@@ -197,9 +158,9 @@ export default function Home() {
                     key={feature.id}
                     className="group card-wrapper left-gradient"
                   >
-                    <div className="p-[24px] relative h-full w-full bg-background/90 sm:group-hover:bg-background rounded-sm duration-300">
+                    <div className="p-[24px] sm:p-[32px] relative h-full w-full bg-background/90 sm:group-hover:bg-background rounded-sm duration-300">
                       <div className="flex flex-col gap-[32px]">
-                        <div className="flex flex-col gap-[16px]">
+                        <div className="flex flex-col gap-[20px]">
                           <Icon size={16} strokeWidth={1.5} />
                           <h3 className="text-2xl">{feature.headline}</h3>
                         </div>

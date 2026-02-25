@@ -69,7 +69,7 @@ export const Headline = () => {
           </Button>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           variants={BLUR_ANIMATION.variants}
           transition={{
             ...BLUR_ANIMATION.transition,
@@ -79,7 +79,7 @@ export const Headline = () => {
           <Button variant="ghost" asChild>
             <Link href={WEBSITE_CONFIG.routes.customers}>Customers</Link>
           </Button>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </div>
   );
