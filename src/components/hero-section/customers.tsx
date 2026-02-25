@@ -43,6 +43,7 @@ export const Customers = () => {
             src={project.icon}
             alt={`${project.title} logo`}
             className="object-contain object-center"
+            quality={50}
             priority
             fill
           />

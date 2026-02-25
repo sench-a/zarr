@@ -1,6 +1,35 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Icons } from "@/components/icons";
+import { BLUR_ANIMATION } from "@/config/animation";
 import { WEBSITE_CONFIG } from "@/config/site";
 
-export const Sample = () => (
+export const Code = () => {
+  return (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={BLUR_ANIMATION.variants}
+      transition={{
+        ...BLUR_ANIMATION.transition,
+        delay: BLUR_ANIMATION.transition.duration * 2,
+      }}
+      className="w-full border bg-background/60 backdrop-blur-sm rounded-sm"
+    >
+      <div className="p-[24px] flex items-center text-muted-foreground gap-3 border-b">
+        <Icons.typescript />
+        <p className="text-xs">@/stripe/lib</p>
+      </div>
+
+      <pre className="p-[24px] h-fit w-full text-xs md:text-sm overflow-x-scroll">
+        <Sample />
+      </pre>
+    </motion.div>
+  );
+};
+
+const Sample = () => (
   <code className="space-y-[4px]">
     <div>
       <span className="text-code-violet">import</span>
@@ -81,7 +110,7 @@ export const Sample = () => (
       ))}
       <span className="text-code-violet">const</span>
       <span> </span>
-      <span className="text-code-blue">paymentIntent</span>
+      <span className="text-code-blue">payment</span>
       <span> </span>
       <span className="text-code-gray">=</span>
       <span> </span>

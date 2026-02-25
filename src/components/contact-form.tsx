@@ -21,7 +21,6 @@ import { Button } from "@/components/ui/button";
 import { Field, FieldLabel } from "@/components/ui/field";
 import { WEBSITE_CONFIG } from "@/config/site";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export type FormSchema = z.infer<typeof formSchema>;
 
@@ -330,8 +329,7 @@ export const ContactForm = () => {
 
       <div className="flex flex-col gap-[8px] px-[--padding-x] py-[16px] border-t *:text-[10px] *:text-muted-foreground *:tracking-wider">
         <p className="text-xxs tracking-wider">
-          Your data will be handled pursuant to zarr.design&apos;s Privacy
-          Policy.
+          You can also contact me at {WEBSITE_CONFIG.email}
         </p>
       </div>
     </div>

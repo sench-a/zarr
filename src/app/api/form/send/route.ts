@@ -1,9 +1,9 @@
 import { Resend } from "resend";
 import { v4 as uuid } from "uuid";
-import { env } from "@/env";
 import { FormSchema } from "@/components/contact-form";
-import { NotificationEmail } from "@/components/notification-email";
+import { NotificationEmail } from "./notification-email";
 import { WEBSITE_CONFIG } from "@/config/site";
+import { env } from "@/env";
 
 const resend = new Resend(env.RESEND_API_KEY);
 

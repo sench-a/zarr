@@ -1,15 +1,15 @@
+import Link from "next/link";
 import Image from "next/image";
-import { Headline } from "@/app/headline";
-import { Code } from "@/components/code";
-import { Card } from "@/components/card";
 import { Grid } from "@/components/grid";
 import { Icons } from "@/components/icons";
 import { Container } from "@/components/container";
 import { ContactForm } from "@/components/contact-form";
 import { Spotlight } from "@/components/ui/spotlight-new";
+import { Customers } from "@/components/hero-section/customers";
+import { Headline } from "@/components/hero-section/headline";
+import { Code } from "@/components/hero-section/code";
 import { FRONTEND_ROUTES } from "@/config/site";
 import { cn } from "@/lib/utils";
-import { Customers } from "./customers";
 
 const TOOLS = [
   {
@@ -122,7 +122,7 @@ export default function Home() {
   return (
     <div className="relative h-full w-full overflow-hidden">
       <main className="h-full w-full">
-        <section id="hero" className="px-0">
+        <section id="hero" className="px-0 border-b">
           <Image
             src="/bg-hero.webp"
             className="absolute top-0 left-0 right-0 -scale-y-[1.15] opacity-50 transition-opacity duration-500 pointer-events-none mx-auto w-full select-none"
@@ -145,7 +145,7 @@ export default function Home() {
         <section id="technical-features">
           <Container className="gap-[80px]">
             <div className="flex flex-col gap-[20px]">
-              {/* <label className="label text-accent">Features</label> */}
+              {/* <label className="label text-accent"></label> */}
               <h2>Push your brand further and faster with ...</h2>
             </div>
 
@@ -193,14 +193,14 @@ export default function Home() {
           </Container>
         </section>
 
-        <section id={FRONTEND_ROUTES.partners.replace("/#", "")}>
+        <section id="partners">
           <Container>
             <div className="flex flex-col gap-[20px]">
-              {/* <label className="label text-accent">Features</label> */}
+              {/* <label className="label text-accent"></label> */}
               <h2>Partnered with the best to elevate your marketing</h2>
             </div>
 
-            <Grid className="grid-rows-3">
+            <ol className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-3 gap-[24px] w-full">
               {TOOLS.map((tool, i) => {
                 return (
                   <li
@@ -209,15 +209,51 @@ export default function Home() {
                       "row-span-2": !!tool.priority,
                     })}
                   >
-                    <Card
-                      index={i}
-                      card={tool}
-                      className="aspect-[1] md:aspect-[4/3] lg:aspect-[16/9]"
-                    />
+                    <Link
+                      href={tool.link ?? ""}
+                      aria-disabled={!tool.link}
+                      target="_blank"
+                      prefetch={false}
+                    >
+                      {
+                        <small className="absolute top-[20px] left-[20px] z-10 text-muted-foreground tracking-widest">
+                          {i + 1}.0
+                        </small>
+                      }
+
+                      {tool.link && (
+                        <Icons.link
+                          strokeWidth={1.5}
+                          size={16}
+                          className="absolute top-[20px] right-[20px] z-10"
+                        />
+                      )}
+
+                      <div className="aspect-[1] md:aspect-[4/3] lg:aspect-[16/9] relative h-full w-full bg-background/90 sm:group-hover:bg-background rounded-sm duration-300">
+                        <div className="absolute h-full w-full flex items-center justify-center">
+                          <figure>
+                            <Image
+                              src={tool.icon}
+                              alt={`${tool.title} icon`}
+                              quality={100}
+                              priority
+                              width={160}
+                              height={140}
+                            />
+                          </figure>
+                        </div>
+
+                        <div className="py-[16px] px-[20px] flex flex-col justify-end items-start h-full gap-[20px]">
+                          <figcaption className="text-xs tracking-[0.07em] text-muted-foreground sm:group-hover:text-primary duration-300">
+                            {tool.description}
+                          </figcaption>
+                        </div>
+                      </div>
+                    </Link>
                   </li>
                 );
               })}
-            </Grid>
+            </ol>
           </Container>
         </section>
 
