@@ -329,7 +329,7 @@ export const ContactForm = () => {
 
       <div className="flex flex-col gap-[8px] px-[--padding-x] py-[16px] border-t *:text-[10px] *:text-muted-foreground *:tracking-wider">
         <p className="text-xxs tracking-wider">
-          You can also contact me at {WEBSITE_CONFIG.email}
+          You can also contact us at {WEBSITE_CONFIG.email}
         </p>
       </div>
     </div>

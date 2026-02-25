@@ -265,8 +265,8 @@ export default function Home() {
             <div className="px-[--padding-x] md:px-0 flex flex-col gap-[24px]">
               <h2>Get in touch</h2>
               <p className="max-w-sm">
-                I am here to cater to your expectations and tailor my expertise
-                to fit your needs and requirements.
+                We are here to cater to your expectations and tailor our
+                expertise to fit your needs and requirements.
                 <br />
                 <br />
                 Expect a response under 24 hours.
