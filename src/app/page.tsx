@@ -8,8 +8,10 @@ import { Spotlight } from "@/components/ui/spotlight-new";
 import { Customers } from "@/components/hero-section/customers";
 import { Headline } from "@/components/hero-section/headline";
 import { Code } from "@/components/hero-section/code";
-import { FRONTEND_ROUTES } from "@/config/site";
+import { FRONTEND_ROUTES, WEBSITE_CONFIG } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { CheckItem } from "@/components/check-item";
+import { CTA } from "@/components/cta";
 
 const TOOLS = [
   {
@@ -133,7 +135,23 @@ export default function Home() {
 
           <Container className="gap-[80px] sm:border-none">
             <div className="relative px-[--padding-x] xl:px-0 h-[55vh] flex flex-col items-center justify-end duration-300">
-              <Headline />
+              <div className="relative flex flex-col justify-center gap-[40px] w-full">
+                <Headline
+                  title={WEBSITE_CONFIG.title}
+                  description={WEBSITE_CONFIG.description}
+                />
+
+                <CTA
+                  primary={{
+                    title: "Get started",
+                    link: WEBSITE_CONFIG.routes.contact,
+                  }}
+                  secondary={{
+                    title: "Pricing",
+                    link: WEBSITE_CONFIG.routes.pricing,
+                  }}
+                />
+              </div>
             </div>
 
             <Customers />
@@ -168,19 +186,9 @@ export default function Home() {
                         <ul className="pl-[2px] flex flex-col gap-[12px]">
                           {feature.ROI.map((item) => {
                             return (
-                              <div
-                                key={item}
-                                className="inline-flex items-center gap-[18px]"
-                              >
-                                <Icons.check
-                                  size={12}
-                                  strokeWidth={3}
-                                  // className="text-accent"
-                                />
-                                <p className="text-sm text-balance leading-relaxed">
-                                  {item}
-                                </p>
-                              </div>
+                              <li key={item}>
+                                <CheckItem item={item} />
+                              </li>
                             );
                           })}
                         </ul>

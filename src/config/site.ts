@@ -3,6 +3,7 @@ import { env } from "@/env";
 export const FRONTEND_ROUTES = {
   home: "/",
   contact: "/#contact",
+  pricing: "/pricing",
 };
 
 const BACKEND_ROUTES = {

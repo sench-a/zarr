@@ -1,22 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Icons } from "@/components/icons";
-import { BLUR_ANIMATION } from "@/config/animation";
+import { Banner } from "@/components/banner";
 import { WEBSITE_CONFIG } from "@/config/site";
+import { BLUR_ANIMATION } from "@/config/animation";
 
 export const Code = () => {
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={BLUR_ANIMATION.variants}
-      transition={{
-        ...BLUR_ANIMATION.transition,
-        delay: BLUR_ANIMATION.transition.duration * 2,
-      }}
-      className="w-full border bg-background/60 backdrop-blur-sm rounded-sm"
-    >
+    <Banner>
       <div className="p-[24px] flex items-center text-muted-foreground gap-3 border-b">
         <Icons.typescript />
         <p className="text-xs">@/stripe/lib</p>
@@ -25,7 +16,7 @@ export const Code = () => {
       <pre className="p-[24px] h-fit w-full text-xs md:text-sm overflow-x-scroll">
         <Sample />
       </pre>
-    </motion.div>
+    </Banner>
   );
 };
 

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useScroll, useMotionValueEvent, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { WEBSITE_CONFIG } from "@/config/site";
+import { Separator } from "../ui/separator";
 
 export const Header = () => {
   const { scrollY } = useScroll();
@@ -43,9 +44,25 @@ export const Header = () => {
           <span className="sr-only">{WEBSITE_CONFIG.title} Logo</span>
         </Link>
 
-        <Button variant="outline" asChild>
-          <Link href={WEBSITE_CONFIG.routes.contact}>Contact</Link>
-        </Button>
+        <div className="h-[25%] flex flex-row items-center gap-[16px]">
+          <Button className="hidden md:flex" variant="ghost" size="sm" asChild>
+            <Link
+              href={WEBSITE_CONFIG.routes.pricing}
+              className="text-muted-foreground"
+            >
+              Pricing
+            </Link>
+          </Button>
+
+          <Separator
+            orientation="vertical"
+            className="mr-[12px] hidden md:flex"
+          />
+
+          <Button variant="outline" asChild>
+            <Link href={WEBSITE_CONFIG.routes.contact}>Contact</Link>
+          </Button>
+        </div>
       </div>
     </motion.header>
   );
