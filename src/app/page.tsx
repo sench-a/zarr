@@ -127,13 +127,13 @@ export default function Home() {
         <section id="hero" className="px-0 border-b">
           <Image
             src="/bg-hero.webp"
-            className="absolute top-0 left-0 right-0 -scale-y-[1.15] opacity-50 transition-opacity duration-500 pointer-events-none mx-auto w-full select-none"
+            className="-scale-y-[1.1] absolute top-0 left-0 right-0 opacity-50 transition-opacity duration-500 pointer-events-none mx-auto w-full select-none"
             alt="background"
             priority
             fill
           />
 
-          <Container className="gap-[80px] sm:border-none">
+          <Container className="gap-[80px]">
             <div className="relative px-[--padding-x] xl:px-0 h-[50vh] flex flex-col items-center justify-end duration-300">
               <div className="relative flex flex-col justify-center gap-[40px] w-full">
                 <Headline

@@ -133,7 +133,7 @@
   }
 
   .card-wrapper {
-    @apply relative p-[1px] rounded-sm overflow-hidden border right-gradient;
+    @apply relative p-[0.5px] rounded-sm overflow-hidden border right-gradient;
   }
 
   .right-gradient {

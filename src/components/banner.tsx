@@ -17,7 +17,7 @@ export const Banner = ({ className, children }: BannerProps) => {
         delay: BLUR_ANIMATION.transition.duration * 2,
       }}
       className={cn(
-        "w-full card-wrapper left-gradient backdrop-blur-sm",
+        "w-full h-full card-wrapper left-gradient backdrop-blur-sm",
         className,
       )}
     >

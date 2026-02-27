@@ -33,7 +33,7 @@ export const Headline = ({ title, description }: HeadlineProps) => {
       </motion.h1>
 
       <motion.p
-        className="max-w-sm sm:max-w-lg text-pretty"
+        className="max-w-xs sm:max-w-lg text-pretty"
         initial="hidden"
         animate="visible"
         variants={BLUR_ANIMATION.variants}
