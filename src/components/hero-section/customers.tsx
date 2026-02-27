@@ -59,7 +59,7 @@ export const Customers = () => {
       animate={{ opacity: 100 }}
       transition={{
         ...BLUR_ANIMATION.transition,
-        delay: BLUR_ANIMATION.transition.duration * 2,
+        delay: BLUR_ANIMATION.transition.duration * 1.6,
       }}
     >
       {isMobile ? <Marquee>{content}</Marquee> : content}

@@ -8,11 +8,11 @@ export const BLUR_ANIMATION = {
     },
   },
   variants: {
-    hidden: { filter: "blur(8px)", y: 15, opacity: 0 },
+    hidden: { filter: "blur(8px)", y: 10, opacity: 0 },
     visible: { filter: "none", y: 0, opacity: 1 },
   },
   transition: {
-    duration: 1.3,
+    duration: 1.1,
     ease: "easeOut",
   } as { duration: number; ease: Easing },
 };

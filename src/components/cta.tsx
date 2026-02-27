@@ -20,29 +20,21 @@ export const CTA = ({ primary, secondary }: CTAProps) => {
     <motion.div
       initial="hidden"
       animate="visible"
-      variants={BLUR_ANIMATION.wrapper}
       className="flex flex-row items-center gap-[12px]"
+      variants={BLUR_ANIMATION.variants}
+      transition={{
+        ...BLUR_ANIMATION.transition,
+        delay: BLUR_ANIMATION.transition.duration * 1.1,
+      }}
     >
-      <motion.div
-        variants={BLUR_ANIMATION.variants}
-        transition={{
-          ...BLUR_ANIMATION.transition,
-          delay: BLUR_ANIMATION.transition.duration * 1.2,
-        }}
-      >
+      <motion.div>
         <Button asChild>
           <Link href={primary.link}>{primary.title}</Link>
         </Button>
       </motion.div>
 
       {secondary ? (
-        <motion.div
-          variants={BLUR_ANIMATION.variants}
-          transition={{
-            ...BLUR_ANIMATION.transition,
-            delay: BLUR_ANIMATION.transition.duration * 1.6,
-          }}
-        >
+        <motion.div>
           <Button variant="ghost" asChild>
             <Link href={secondary.link}>{secondary.title}</Link>
           </Button>

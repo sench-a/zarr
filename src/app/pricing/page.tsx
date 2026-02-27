@@ -106,7 +106,7 @@ export default function PricingPage() {
             fill
           />
 
-          <Container className="gap-[80px] md:gap-[40px] md:flex md:flex-row md:items-center">
+          <Container className="gap-[80px] md:gap-[40px] md:flex md:flex-row md:items-center md:justify-between">
             <div className="relative xl:px-0 h-[40vh] sm:h-full flex flex-col items-center justify-end duration-300">
               <div className="relative px-[--padding-x] xl:px-0 flex flex-col justify-center gap-[40px] w-full">
                 <Headline title={TITLE} description={DESCRIPTION} />
