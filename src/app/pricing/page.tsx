@@ -11,7 +11,7 @@ import { Banner } from "@/components/banner";
 
 const SCOPE = [
   {
-    headline: "Brand-centric UI / UX",
+    headline: "Brand-centric UI",
     content: [
       "Sitemap",
       "Page structure and layout",
@@ -83,14 +83,6 @@ const OPTIONAL = [
   "Other integrations",
 ];
 
-const style = {
-  container: "space-y-[10px]",
-  headline: "font-medium leading-relaxed",
-  description: "text-muted-foreground text-xs leading-relaxed",
-  section: "w-full space-y-[40px] py-[16px] px-0",
-  link: "text-xs tracking-wider leading-relaxed text-muted-foreground hover:text-primary duration-300",
-};
-
 const TITLE = `Custom pricing`;
 const DESCRIPTION =
   "Get a brand-tailored website that flexibly scales with your ambitions.";
@@ -107,7 +99,7 @@ export default function PricingPage() {
         <div className="relative overflow-hidden min-h-screen w-full pt-[40px] md:pt-0 flex items-center justify-center">
           <section id="hero-section" className="px-0">
             <Container className="gap-[80px] md:gap-[40px] md:flex md:flex-row md:items-center">
-              <div className="relative xl:px-0 h-[55vh] sm:h-full flex flex-col items-center justify-end duration-300">
+              <div className="relative xl:px-0 h-[50vh] sm:h-full flex flex-col items-center justify-end duration-300">
                 <div className="relative px-[--padding-x] xl:px-0 flex flex-col justify-center gap-[40px] w-full">
                   <Headline title={TITLE} description={DESCRIPTION} />
 
