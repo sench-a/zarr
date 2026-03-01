@@ -64,7 +64,7 @@ export const ContactForm = () => {
         description: "Expect a response under 24 hours.",
       });
 
-      form.reset();
+      // form.reset();
     } else {
       toast.error("Request has not been sent", {
         description: "Please try again",

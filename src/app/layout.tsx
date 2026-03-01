@@ -6,6 +6,7 @@ import { WEBSITE_CONFIG } from "@/config/site";
 import type { LayoutProps } from "@/types";
 import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
+import { Providers } from "@/components/layout/providers";
 
 export const metadata: Metadata = {
   metadataBase: new URL(WEBSITE_CONFIG.url),
@@ -74,9 +75,10 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={soehne.className}>
-        <Header />
-
-        {children}
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
 
         <Sonner />
 

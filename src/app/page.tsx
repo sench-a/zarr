@@ -243,7 +243,6 @@ export default function Home() {
                             <Image
                               src={tool.icon}
                               alt={`${tool.title} icon`}
-                              quality={100}
                               priority
                               width={160}
                               height={140}

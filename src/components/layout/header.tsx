@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import posthog from "posthog-js";
 import { useState } from "react";
 import { useScroll, useMotionValueEvent, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
