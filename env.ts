@@ -4,6 +4,7 @@ import { createEnv } from "@t3-oss/env-nextjs";
 export const env = createEnv({
   /*
    * Server-side Environment variables, not available on the client.
+  
    * 💡 Will throw error if you access these variables on the client.
    */
   server: {
@@ -17,7 +18,12 @@ export const env = createEnv({
    */
   client: {
     NEXT_PUBLIC_URL: z.string().min(1),
+
     NEXT_PUBLIC_ENVIRONMENT: z.enum(["production", "development"]),
+
+    NEXT_PUBLIC_POSTHOG_KEY: z.string().min(1),
+    NEXT_PUBLIC_POSTHOG_HOST: z.string().min(1),
+    NEXT_PUBLIC_POSTHOG_PROXY: z.string().min(1),
   },
 
   /*
@@ -29,6 +35,10 @@ export const env = createEnv({
   runtimeEnv: {
     NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
     NEXT_PUBLIC_ENVIRONMENT: process.env.NEXT_PUBLIC_ENVIRONMENT,
+
+    NEXT_PUBLIC_POSTHOG_KEY: process.env.NEXT_PUBLIC_POSTHOG_KEY,
+    NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+    NEXT_PUBLIC_POSTHOG_PROXY: process.env.NEXT_PUBLIC_POSTHOG_PROXY,
 
     RESEND_API_KEY: process.env.RESEND_API_KEY,
   },

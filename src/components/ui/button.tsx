@@ -38,8 +38,7 @@ const buttonVariants = cva(
   },
 );
 
-type ButtonProps = HTMLMotionProps<"button"> &
-  React.ButtonHTMLAttributes<HTMLButtonElement> &
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
   VariantProps<typeof buttonVariants> & { asChild?: boolean };
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -51,10 +50,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     }
 
     return (
-      <motion.button
+      <button
         ref={ref}
         className={className}
-        whileTap={{ scale: 0.98 }}
+        // whileTap={{ scale: 0.98 }}
         {...props}
       />
     );

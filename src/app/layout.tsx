@@ -80,7 +80,7 @@ export default function RootLayout({ children }: LayoutProps) {
 
         <Sonner />
 
-        <VercelAnalytics />
+        {/* <VercelAnalytics /> */}
       </body>
     </html>
   );
