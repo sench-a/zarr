@@ -2,6 +2,7 @@
 
 import z from "zod";
 import { toast } from "sonner";
+import posthog from "posthog-js";
 import { useEffect, useMemo, useState } from "react";
 import useMeasure from "react-use-measure";
 import { Controller, useForm } from "react-hook-form";
@@ -56,6 +57,8 @@ export const ContactForm = () => {
     });
 
     if (response.ok) {
+      posthog.capture("form_submitted");
+
       toast.success("Request successfully sent!", {
         position: "top-center",
         description: "Expect a response under 24 hours.",
