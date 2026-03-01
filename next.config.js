@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   images: {
     formats: ["image/webp"],
     deviceSizes: [
@@ -16,11 +17,11 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "a.zarr.design/static/:path*",
+        source: "/ph/static/:path*",
         destination: "https://us-assets.i.posthog.com/static/:path*",
       },
       {
-        source: "a.zarr.design/:path*",
+        source: "/ph/:path*",
         destination: "https://us.i.posthog.com/:path*",
       },
     ];
